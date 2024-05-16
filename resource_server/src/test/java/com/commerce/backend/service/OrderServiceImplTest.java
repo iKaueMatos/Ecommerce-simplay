@@ -1,12 +1,19 @@
 package com.commerce.backend.service;
 
-import com.commerce.backend.converter.order.OrderResponseConverter;
-import com.commerce.backend.dao.OrderRepository;
-import com.commerce.backend.error.exception.InvalidArgumentException;
-import com.commerce.backend.error.exception.ResourceFetchException;
+import com.commerce.backend.cart.infra.entity.Cart;
+import com.commerce.backend.cart.infra.entity.CartItem;
+import com.commerce.backend.core.error.exception.InvalidArgumentException;
+import com.commerce.backend.core.error.exception.ResourceFetchException;
 import com.commerce.backend.model.entity.*;
 import com.commerce.backend.model.request.order.PostOrderRequest;
 import com.commerce.backend.model.response.order.OrderResponse;
+import com.commerce.backend.order.application.converter.OrderResponseConverter;
+import com.commerce.backend.order.domain.service.OrderServiceImpl;
+import com.commerce.backend.order.infra.entity.Order;
+import com.commerce.backend.order.infra.repository.OrderRepository;
+import com.commerce.backend.product.infra.entity.ProductVariant;
+import com.commerce.backend.user.application.useCases.service.IUserService;
+import com.commerce.backend.user.infra.entity.User;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,7 +50,7 @@ class OrderServiceImplTest {
     private OrderRepository orderRepository;
 
     @Mock
-    private UserService userService;
+    private IUserService userService;
 
     @Mock
     private CartService cartService;

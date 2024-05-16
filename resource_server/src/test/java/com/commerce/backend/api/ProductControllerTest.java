@@ -4,7 +4,7 @@ package com.commerce.backend.api;
 import com.commerce.backend.model.response.product.ProductDetailsResponse;
 import com.commerce.backend.model.response.product.ProductResponse;
 import com.commerce.backend.model.response.product.ProductVariantResponse;
-import com.commerce.backend.service.ProductService;
+import com.commerce.backend.product.application.service.ProductService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;

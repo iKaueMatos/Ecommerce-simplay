@@ -1,11 +1,18 @@
 package com.commerce.backend.service;
 
-import com.commerce.backend.converter.cart.CartResponseConverter;
-import com.commerce.backend.dao.CartRepository;
-import com.commerce.backend.error.exception.InvalidArgumentException;
-import com.commerce.backend.error.exception.ResourceNotFoundException;
-import com.commerce.backend.model.entity.*;
-import com.commerce.backend.model.response.cart.CartResponse;
+import com.commerce.backend.cart.application.converter.CartResponseConverter;
+import com.commerce.backend.cart.application.useCases.dto.CartResponse;
+import com.commerce.backend.cart.infra.entity.Cart;
+import com.commerce.backend.cart.infra.entity.CartItem;
+import com.commerce.backend.cart.infra.entity.CartRepository;
+import com.commerce.backend.core.error.exception.InvalidArgumentException;
+import com.commerce.backend.core.error.exception.ResourceNotFoundException;
+import com.commerce.backend.order.domain.service.CartServiceImpl;
+import com.commerce.backend.order.infra.entity.Discount;
+import com.commerce.backend.product.application.service.ProductService;
+import com.commerce.backend.product.infra.entity.ProductVariant;
+import com.commerce.backend.user.application.useCases.service.IUserService;
+import com.commerce.backend.user.infra.entity.User;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -41,7 +48,7 @@ class CartServiceImplTest {
     private ProductService productService;
 
     @Mock
-    private UserService userService;
+    private IUserService userService;
 
     @Mock
     private CartResponseConverter cartResponseConverter;

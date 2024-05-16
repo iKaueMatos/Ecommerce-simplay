@@ -1,8 +1,9 @@
 package com.commerce.backend.api;
 
 
-import com.commerce.backend.model.response.category.ProductCategoryResponse;
-import com.commerce.backend.service.ProductCategoryService;
+import com.commerce.backend.product.application.service.ProductCategoryService;
+import com.commerce.backend.product.application.useCases.controller.CategoryController;
+import com.commerce.backend.product.application.useCases.dto.ProductCategoryResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;

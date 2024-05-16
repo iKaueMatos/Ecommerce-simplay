@@ -1,9 +1,7 @@
 package com.commerce.backend.api;
 
-import com.commerce.backend.model.entity.User;
-import com.commerce.backend.model.request.user.*;
-import com.commerce.backend.service.TokenService;
-import com.commerce.backend.service.UserService;
+import com.commerce.backend.user.application.useCases.service.IUserService;
+import com.commerce.backend.user.infra.entity.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
@@ -39,7 +37,7 @@ class PublicUserControllerTest {
     @Autowired
     ObjectMapper objectMapper;
     @MockBean
-    private UserService userService;
+    private IUserService userService;
     @MockBean
     private TokenService tokenService;
     @Autowired

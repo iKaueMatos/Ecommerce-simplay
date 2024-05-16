@@ -1,10 +1,12 @@
 package com.commerce.backend.service;
 
-import com.commerce.backend.dao.DiscountRepository;
-import com.commerce.backend.error.exception.InvalidArgumentException;
-import com.commerce.backend.error.exception.ResourceNotFoundException;
-import com.commerce.backend.model.entity.Cart;
-import com.commerce.backend.model.entity.Discount;
+import com.commerce.backend.cart.infra.entity.Cart;
+import com.commerce.backend.core.error.exception.InvalidArgumentException;
+import com.commerce.backend.core.error.exception.ResourceNotFoundException;
+import com.commerce.backend.order.application.service.CartService;
+import com.commerce.backend.order.domain.service.DiscountServiceImpl;
+import com.commerce.backend.order.infra.entity.Discount;
+import com.commerce.backend.order.infra.repository.DiscountRepository;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

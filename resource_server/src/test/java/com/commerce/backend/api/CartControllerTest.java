@@ -1,9 +1,14 @@
 package com.commerce.backend.api;
 
-import com.commerce.backend.model.dto.DiscountDTO;
-import com.commerce.backend.model.request.cart.*;
-import com.commerce.backend.model.response.cart.CartResponse;
-import com.commerce.backend.service.CartService;
+import com.commerce.backend.cart.application.useCases.dto.AddToCartRequest;
+import com.commerce.backend.cart.application.useCases.dto.CartResponse;
+import com.commerce.backend.cart.application.useCases.dto.ConfirmCartRequest;
+import com.commerce.backend.cart.application.useCases.dto.DecrementCartItemRequest;
+import com.commerce.backend.cart.application.useCases.dto.IncrementCartItemRequest;
+import com.commerce.backend.cart.application.useCases.dto.RemoveFromCartRequest;
+import com.commerce.backend.order.application.service.CartService;
+import com.commerce.backend.order.application.useCases.controller.CartController;
+import com.commerce.backend.order.domain.model.DiscountDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;

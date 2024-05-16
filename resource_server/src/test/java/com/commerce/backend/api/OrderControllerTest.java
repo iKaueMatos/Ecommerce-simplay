@@ -1,9 +1,8 @@
 package com.commerce.backend.api;
 
 
-import com.commerce.backend.model.request.order.PostOrderRequest;
-import com.commerce.backend.model.response.order.OrderResponse;
-import com.commerce.backend.service.OrderService;
+import com.commerce.backend.order.application.service.OrderService;
+import com.commerce.backend.order.application.useCases.controller.OrderController;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;

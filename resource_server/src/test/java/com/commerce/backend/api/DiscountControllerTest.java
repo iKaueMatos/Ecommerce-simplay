@@ -1,7 +1,9 @@
 package com.commerce.backend.api;
 
-import com.commerce.backend.model.request.discount.ApplyDiscountRequest;
-import com.commerce.backend.service.DiscountService;
+
+import com.commerce.backend.order.application.service.DiscountService;
+import com.commerce.backend.order.application.useCases.controller.DiscountController;
+import com.commerce.backend.order.application.useCases.dto.ApplyDiscountRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;

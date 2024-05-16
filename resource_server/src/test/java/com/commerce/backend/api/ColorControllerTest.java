@@ -1,7 +1,8 @@
 package com.commerce.backend.api;
 
-import com.commerce.backend.model.response.color.ProductColorResponse;
-import com.commerce.backend.service.ProductColorService;
+import com.commerce.backend.product.application.service.ProductColorService;
+import com.commerce.backend.product.application.useCases.controller.ColorController;
+import com.commerce.backend.product.application.useCases.dto.ProductColorResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;

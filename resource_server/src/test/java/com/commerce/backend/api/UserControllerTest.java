@@ -1,11 +1,8 @@
 package com.commerce.backend.api;
 
-
-import com.commerce.backend.model.request.user.PasswordResetRequest;
-import com.commerce.backend.model.request.user.UpdateUserAddressRequest;
-import com.commerce.backend.model.request.user.UpdateUserRequest;
-import com.commerce.backend.model.response.user.UserResponse;
-import com.commerce.backend.service.UserService;
+import com.commerce.backend.user.application.useCases.dto.UpdateUserRequest;
+import com.commerce.backend.user.application.useCases.dto.UserResponse;
+import com.commerce.backend.user.application.useCases.service.IUserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
@@ -43,7 +40,7 @@ class UserControllerTest {
     @Autowired
     ObjectMapper objectMapper;
     @MockBean
-    private UserService userService;
+    private IUserService userService;
     @Autowired
     private MockMvc mockMvc;
     private Faker faker;
@@ -58,8 +55,7 @@ class UserControllerTest {
 
         // given
         UserResponse userResponse = new UserResponse();
-
-
+        
         given(userService.fetchUser()).willReturn(userResponse);
 
         // when
