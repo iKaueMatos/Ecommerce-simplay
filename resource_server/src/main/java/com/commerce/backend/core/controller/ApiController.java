@@ -6,5 +6,4 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/api")
-public abstract class ApiController {
-}
+public abstract class ApiController { }
