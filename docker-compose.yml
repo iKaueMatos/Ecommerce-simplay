@@ -1,0 +1,61 @@
+version: '3'
+services:
+  mysql:
+    image: mysql
+    restart: always
+    container_name: mysql
+    ports:
+      - '3307:3306'
+    environment:
+      MYSQL_DATABASE: nova
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: nova
+      MYSQL_PASSWORD: nova
+    volumes:
+      - './sql/script.sql/:/docker-entrypoint-initdb.d/script.sql'
+
+  authorization_server:
+    image: 'nova-authorization-server:latest'
+    build:
+      context: ./authorization_server
+    container_name: authorization_server
+    depends_on:
+      - mysql
+    environment:
+      - >-
+        SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/nova?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=nova
+      - SPRING_DATASOURCE_PASSWORD=nova
+    ports:
+      - '8081:8081'
+
+  resource_server:
+    image: 'nova-resource-server:latest'
+    build:
+      context: ./resource_server
+    container_name: resource_server
+    depends_on:
+      - mysql
+      - authorization_server
+    environment:
+      - >-
+        SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/nova?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+      - SPRING_DATASOURCE_USERNAME=novauser
+      - SPRING_DATASOURCE_PASSWORD=novapassword
+      - 'SECURITY_AUTH_URL=http://authorization_server:8081/oauth/check_token'
+      - SECURITY_AUTH_CLIENT_ID=test
+      - >-
+        SECURITY_AUTH_CLIENT_PASSWORD=test
+    ports:
+      - '8080:8080'
+
+  client:
+    image: 'nova-client:latest'
+    build:
+      context: ./client
+    container_name: client
+    depends_on: 
+      - authorization_server
+      - resource_server
+    ports:
+      - '4200:80'
