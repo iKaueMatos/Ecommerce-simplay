@@ -1,9 +1,9 @@
 package com.commerce.backend.service;
 
 import com.commerce.backend.core.error.exception.ResourceNotFoundException;
-import com.commerce.backend.model.dto.ColorDTO;
-import com.commerce.backend.model.response.color.ProductColorResponse;
 import com.commerce.backend.product.application.converter.ProductColorResponseConverter;
+import com.commerce.backend.product.application.useCases.dto.ProductColorResponse;
+import com.commerce.backend.product.domain.model.ColorDTO;
 import com.commerce.backend.product.domain.service.ProductColorServiceImpl;
 import com.commerce.backend.product.infra.cache.ProductColorCacheService;
 import com.commerce.backend.product.infra.entity.Color;
@@ -76,15 +76,10 @@ class ProductColorServiceImplTest {
 
     @Test
     void it_should_throw_exception_when_no_color() {
-
-        // given
         given(productColorCacheService.findAll()).willReturn(Collections.emptyList());
 
-        // when, then
         assertThatThrownBy(() -> productColorService.findAll())
                 .isInstanceOf(ResourceNotFoundException.class)
                 .hasMessage("Could not find product colors");
-
     }
-
 }

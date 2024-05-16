@@ -3,6 +3,8 @@ package com.commerce.backend.order.domain.service;
 import com.commerce.backend.cart.infra.entity.Cart;
 import com.commerce.backend.core.error.exception.InvalidArgumentException;
 import com.commerce.backend.core.error.exception.ResourceNotFoundException;
+import com.commerce.backend.order.application.service.CartService;
+import com.commerce.backend.order.application.service.DiscountService;
 import com.commerce.backend.order.infra.entity.Discount;
 import com.commerce.backend.order.infra.repository.DiscountRepository;
 
@@ -13,7 +15,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DiscountServiceImpl implements DiscountService {
-
     private final DiscountRepository discountRepository;
     private final CartService cartService;
 

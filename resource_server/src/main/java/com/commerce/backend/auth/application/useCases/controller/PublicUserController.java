@@ -1,8 +1,12 @@
-package com.commerce.backend.api;
+package com.commerce.backend.auth.application.useCases.controller;
 
-
-import com.commerce.backend.model.request.user.*;
-import com.commerce.backend.service.TokenService;
+import com.commerce.backend.auth.application.services.ITokenService;
+import com.commerce.backend.core.controller.PublicApiController;
+import com.commerce.backend.user.application.useCases.dto.PasswordForgotConfirmRequest;
+import com.commerce.backend.user.application.useCases.dto.PasswordForgotRequest;
+import com.commerce.backend.user.application.useCases.dto.PasswordForgotValidateRequest;
+import com.commerce.backend.user.application.useCases.dto.RegisterUserRequest;
+import com.commerce.backend.user.application.useCases.dto.ValidateEmailRequest;
 import com.commerce.backend.user.application.useCases.service.IUserService;
 import com.commerce.backend.user.infra.entity.User;
 
@@ -19,10 +23,10 @@ import javax.validation.Valid;
 public class PublicUserController extends PublicApiController {
 
     private final IUserService userService;
-    private final TokenService tokenService;
+    private final ITokenService tokenService;
 
     @Autowired
-    public PublicUserController(IUserService userService, TokenService tokenService) {
+    public PublicUserController(IUserService userService, ITokenService tokenService) {
         this.userService = userService;
         this.tokenService = tokenService;
     }

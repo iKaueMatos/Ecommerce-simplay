@@ -9,7 +9,7 @@ import com.commerce.backend.auth.infra.repository.PasswordForgotTokenRepository;
 import com.commerce.backend.auth.infra.repository.VerificationTokenRepository;
 import com.commerce.backend.core.error.exception.InvalidArgumentException;
 import com.commerce.backend.core.error.exception.ResourceNotFoundException;
-import com.commerce.backend.model.request.user.PasswordForgotValidateRequest;
+import com.commerce.backend.user.application.useCases.dto.PasswordForgotValidateRequest;
 import com.commerce.backend.user.application.useCases.service.IUserService;
 import com.commerce.backend.user.infra.entity.User;
 

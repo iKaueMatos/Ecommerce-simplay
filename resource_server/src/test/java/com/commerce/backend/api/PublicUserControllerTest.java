@@ -1,5 +1,12 @@
 package com.commerce.backend.api;
 
+import com.commerce.backend.auth.application.services.ITokenService;
+import com.commerce.backend.auth.application.useCases.controller.PublicUserController;
+import com.commerce.backend.user.application.useCases.dto.PasswordForgotConfirmRequest;
+import com.commerce.backend.user.application.useCases.dto.PasswordForgotRequest;
+import com.commerce.backend.user.application.useCases.dto.PasswordForgotValidateRequest;
+import com.commerce.backend.user.application.useCases.dto.RegisterUserRequest;
+import com.commerce.backend.user.application.useCases.dto.ValidateEmailRequest;
 import com.commerce.backend.user.application.useCases.service.IUserService;
 import com.commerce.backend.user.infra.entity.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,7 +46,7 @@ class PublicUserControllerTest {
     @MockBean
     private IUserService userService;
     @MockBean
-    private TokenService tokenService;
+    private ITokenService tokenService;
     @Autowired
     private MockMvc mockMvc;
     private Faker faker;
@@ -134,70 +141,52 @@ class PublicUserControllerTest {
 
     @Test
     void it_should_not_validate_email_if_invalid_token() throws Exception {
-
-        // given
         String token = "";
         ValidateEmailRequest validateEmailRequest = new ValidateEmailRequest();
         validateEmailRequest.setToken(token);
 
-        // when
         MvcResult result = mockMvc.perform(post("/api/public/account/registration/validate")
                 .content(objectMapper.writeValueAsString(validateEmailRequest))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is4xxClientError())
                 .andReturn();
 
-
-        // then
         verify(tokenService, times(0)).validateEmail(token);
         then(result.getResponse().getContentAsString()).contains("must not be blank");
     }
 
     @Test
     void it_should_create_password_reset_token() throws Exception {
-
-        // given
         String email = String.format("%s@%s.com", faker.lorem().characters(1, 10), faker.lorem().characters(1, 10));
         PasswordForgotRequest passwordForgotRequest = new PasswordForgotRequest();
         passwordForgotRequest.setEmail(email);
 
-        // when
         mockMvc.perform(post("/api/public/account/password/forgot")
                 .content(objectMapper.writeValueAsString(passwordForgotRequest))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is2xxSuccessful())
                 .andReturn();
-
-
-        // then
         verify(tokenService, times(1)).createPasswordResetToken(email);
     }
 
     @Test
     void it_should_not_create_password_reset_token_if_invalid_email() throws Exception {
-
-        // given
         String email = String.valueOf(faker.number().randomDigitNotZero());
         PasswordForgotRequest passwordForgotRequest = new PasswordForgotRequest();
         passwordForgotRequest.setEmail(email);
 
-        // when
         MvcResult result = mockMvc.perform(post("/api/public/account/password/forgot")
                 .content(objectMapper.writeValueAsString(passwordForgotRequest))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is4xxClientError())
                 .andReturn();
 
-
-        // then
         verify(tokenService, times(0)).createPasswordResetToken(email);
         then(result.getResponse().getContentAsString()).contains("Invalid email");
     }
 
     @Test
     void it_should_validate_forgot_password_request() throws Exception {
-
-        // given
         String token = faker.lorem().word();
         String password = faker.lorem().characters(6, 52);
         String passwordRepeat = password + "";
@@ -247,47 +236,33 @@ class PublicUserControllerTest {
 
     @Test
     void it_should_confirm_forgot_password_request() throws Exception {
-
-        // given
         String token = faker.lorem().word();
-
         PasswordForgotConfirmRequest passwordForgotConfirmRequest = new PasswordForgotConfirmRequest();
         passwordForgotConfirmRequest.setToken(token);
 
-        // when
         mockMvc.perform(post("/api/public/account/password/forgot/confirm")
                 .content(objectMapper.writeValueAsString(passwordForgotConfirmRequest))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is2xxSuccessful())
                 .andReturn();
 
-
-        // then
         verify(tokenService, times(1)).validateForgotPasswordConfirm(token);
     }
 
     @Test
     void it_should_not_confirm_forgot_password_request_if_invalid_request() throws Exception {
-
-        // given
         String token = null;
 
         PasswordForgotConfirmRequest passwordForgotConfirmRequest = new PasswordForgotConfirmRequest();
         passwordForgotConfirmRequest.setToken(token);
 
-
-        // when
         MvcResult result = mockMvc.perform(post("/api/public/account/password/forgot/confirm")
                 .content(objectMapper.writeValueAsString(passwordForgotConfirmRequest))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is4xxClientError())
                 .andReturn();
 
-
-        // then
         verify(tokenService, times(0)).validateForgotPasswordConfirm(token);
         then(result.getResponse().getContentAsString()).contains("must not be blank");
     }
-
-
 }

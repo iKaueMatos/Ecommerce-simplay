@@ -13,14 +13,9 @@ import java.util.Optional;
 @Repository
 public interface ProductRepository extends PagingAndSortingRepository<Product, Long> {
     Optional<Product> findByUrl(String url);
-
     List<Product> findAllByProductCategory(Pageable pageable, ProductCategory productCategory);
-
     List<Product> findTop8ByOrderByDateCreatedDesc();
-
     List<Product> findAllByNameContainingIgnoreCase(String name, Pageable pageable);
-
     List<Product> findTop8ByProductCategoryAndIdIsNot(ProductCategory productCategory, Long id);
-
     List<Product> findAllByProductCategoryIsNot(ProductCategory productCategory, Pageable pageable);
 }

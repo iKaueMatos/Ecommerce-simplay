@@ -1,5 +1,8 @@
 package com.commerce.backend.api;
 
+import com.commerce.backend.user.application.useCases.controller.UserController;
+import com.commerce.backend.user.application.useCases.dto.PasswordResetRequest;
+import com.commerce.backend.user.application.useCases.dto.UpdateUserAddressRequest;
 import com.commerce.backend.user.application.useCases.dto.UpdateUserRequest;
 import com.commerce.backend.user.application.useCases.dto.UserResponse;
 import com.commerce.backend.user.application.useCases.service.IUserService;

@@ -1,12 +1,13 @@
 package com.commerce.backend.product.application.converter;
 
-
 import com.commerce.backend.product.application.useCases.dto.ProductResponse;
+import com.commerce.backend.product.domain.model.ColorDTO;
 import com.commerce.backend.product.domain.model.ProductVariantDTO;
 import com.commerce.backend.product.infra.entity.Product;
 
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -19,22 +20,22 @@ public class ProductResponseConverter implements Function<Product, ProductRespon
         ProductResponse productResponse = new ProductResponse();
         productResponse.setName(product.getName());
         productResponse.setUrl(product.getUrl());
-        productResponse.setProductVariants(product.getProductVariantList()
+         
+        List<ProductVariantDTO> productVariantDTOs = product.getProductVariantList()
                 .stream()
-                .map(variant -> ProductVariantDTO
-                        .builder()
+                .map(variant -> ProductVariantDTO.builder()
                         .id(variant.getId())
                         .price(variant.getPrice())
                         .thumb(variant.getThumb())
                         .stock(variant.getStock())
-                        .color(ColorDTO
-                                .builder()
+                        .color(ColorDTO.builder()
                                 .name(variant.getColor().getName())
                                 .hex(variant.getColor().getHex())
                                 .build())
                         .build())
-                .collect(Collectors.toList()));
+                .collect(Collectors.toList());
 
+        productResponse.setProductVariants(productVariantDTOs);
         return productResponse;
     }
 }

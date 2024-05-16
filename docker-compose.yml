@@ -48,14 +48,3 @@ services:
         SECURITY_AUTH_CLIENT_PASSWORD=test
     ports:
       - '8080:8080'
-
-  client:
-    image: 'nova-client:latest'
-    build:
-      context: ./client
-    container_name: client
-    depends_on: 
-      - authorization_server
-      - resource_server
-    ports:
-      - '4200:80'

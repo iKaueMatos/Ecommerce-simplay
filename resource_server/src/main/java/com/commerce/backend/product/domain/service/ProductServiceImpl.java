@@ -8,6 +8,8 @@ import com.commerce.backend.product.application.converter.ProductResponseConvert
 import com.commerce.backend.product.application.converter.ProductVariantResponseConverter;
 import com.commerce.backend.product.application.service.ProductService;
 import com.commerce.backend.product.application.useCases.dto.ProductDetailsResponse;
+import com.commerce.backend.product.application.useCases.dto.ProductResponse;
+import com.commerce.backend.product.application.useCases.dto.ProductVariantResponse;
 import com.commerce.backend.product.domain.specs.ProductVariantSpecs;
 import com.commerce.backend.product.infra.cache.ProductCacheService;
 import com.commerce.backend.product.infra.cache.ProductVariantCacheService;

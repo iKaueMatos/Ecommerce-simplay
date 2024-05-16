@@ -20,15 +20,12 @@ import java.util.Objects;
 
 @RestController
 public class ProductController extends PublicApiController {
-
     private final ProductService productService;
-
 
     @Autowired
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
-
 
     @GetMapping(value = "/product")
     public ResponseEntity<List<ProductVariantResponse>> getAll(@RequestParam("page") Integer page,

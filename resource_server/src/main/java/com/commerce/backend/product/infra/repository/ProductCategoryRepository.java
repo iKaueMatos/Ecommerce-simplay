@@ -7,7 +7,6 @@ import com.commerce.backend.product.infra.entity.ProductCategory;
 
 import java.util.List;
 
-
 @Repository
 public interface ProductCategoryRepository extends CrudRepository<ProductCategory, Long> {
     List<ProductCategory> findAllByOrderByName();

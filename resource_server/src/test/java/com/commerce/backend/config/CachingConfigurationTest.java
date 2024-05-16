@@ -1,5 +1,6 @@
 package com.commerce.backend.config;
 
+import com.commerce.backend.core.config.CachingConfiguration;
 import com.github.benmanes.caffeine.cache.Ticker;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.runner.JUnitPlatform;

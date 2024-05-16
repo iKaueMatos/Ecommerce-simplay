@@ -16,7 +16,6 @@ import java.util.List;
 @NoArgsConstructor
 @ToString(exclude = "productVariantList")
 public class Color {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

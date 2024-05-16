@@ -18,7 +18,6 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString(exclude = "cart")
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

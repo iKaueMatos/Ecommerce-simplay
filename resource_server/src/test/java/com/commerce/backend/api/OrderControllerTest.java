@@ -3,6 +3,8 @@ package com.commerce.backend.api;
 
 import com.commerce.backend.order.application.service.OrderService;
 import com.commerce.backend.order.application.useCases.controller.OrderController;
+import com.commerce.backend.order.application.useCases.dto.OrderResponse;
+import com.commerce.backend.order.application.useCases.dto.PostOrderRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
@@ -56,21 +58,15 @@ class OrderControllerTest {
 
     @Test
     void it_should_get_all_orders_count() throws Exception {
-
-        // given
         Integer orderCount = (int) faker.number().randomNumber();
 
         given(orderService.getAllOrdersCount()).willReturn(orderCount);
 
-
-        // when
         MvcResult result = mockMvc.perform(get("/api/order/count")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().is2xxSuccessful())
                 .andReturn();
 
-
-        // then
         verify(orderService, times(1)).getAllOrdersCount();
         then(result.getResponse().getContentAsString()).isEqualTo(orderCount.toString());
     }

@@ -7,8 +7,6 @@ import com.commerce.backend.order.application.useCases.dto.PostOrderRequest;
 
 public interface OrderService {
     Integer getAllOrdersCount();
-
     List<OrderResponse> getAllOrders(Integer page, Integer pageSize);
-
     OrderResponse postOrder(PostOrderRequest postOrderRequest);
 }
