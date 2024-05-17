@@ -10,7 +10,7 @@ RUN mvn package -DskipTests
 FROM adoptopenjdk:11-jre-hotspot
 WORKDIR /app
 
-COPY --from=build /build/target/*.jar authorization_server.jar
+COPY --from=build /build/target/*.jar nova-painel.jar
 
-EXPOSE 8081
-ENTRYPOINT ["java", "-jar", "authorization_server.jar"]
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "nova-painel.jar"]

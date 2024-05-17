@@ -15,6 +15,7 @@ services:
       - './sql/script.sql/:/docker-entrypoint-initdb.d/script.sql'
 
   authorization_server:
+    restart: always
     image: 'nova-authorization-server:latest'
     build:
       context: ./authorization_server
@@ -29,19 +30,20 @@ services:
     ports:
       - '8081:8081'
 
-  resource_server:
+  nova-painel:
+    restart: always
     image: 'nova-resource-server:latest'
     build:
-      context: ./resource_server
-    container_name: resource_server
+      context: ./nova-painel
+    container_name: nova-painel
     depends_on:
       - mysql
       - authorization_server
     environment:
       - >-
         SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/nova?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
-      - SPRING_DATASOURCE_USERNAME=novauser
-      - SPRING_DATASOURCE_PASSWORD=novapassword
+      - SPRING_DATASOURCE_USERNAME=nova
+      - SPRING_DATASOURCE_PASSWORD=nova
       - 'SECURITY_AUTH_URL=http://authorization_server:8081/oauth/check_token'
       - SECURITY_AUTH_CLIENT_ID=test
       - >-

@@ -1,0 +1,8 @@
+FROM adoptopenjdk:11-jre-hotspot
+
+WORKDIR /app
+
+COPY *.jar nova-painel.jar
+
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "nova-painel.jar"]

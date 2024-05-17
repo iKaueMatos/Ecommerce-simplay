@@ -1,4 +1,4 @@
-use keyist;
+use nova;
 
 drop table if exists color;
 
