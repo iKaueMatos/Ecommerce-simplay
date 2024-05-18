@@ -6,7 +6,6 @@
 ## Sumário
 
 - [📄 Descrição](##descrição)
-- [🏛️ Arquitetura](##arquitetura)
 - [🛠️ Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [⚙️ Configuração do Ambiente](#configuração-do-ambiente)
 - [🚀 Execução](#execução)
@@ -45,18 +44,12 @@ olá devs tudo bem ? com vocês hoje estou divulgando aqui um projeto que tinha 
 
 1. Clone o repositório:
     ```bash
-      git@github.com:Nova-Software-Organization/Nova-core.git
+      https://github.com/iKaueMatos/Nova-painel-backEnd
     ```
 
 2. Configure as variáveis de ambiente criando um arquivo `application-dev.properties` na raiz do projeto e defina as variáveis necessárias:
     ```env
     DATABASE_URL=mysql://usuario:senha@localhost:5432/meubanco
-    REDIS_URL=redis://localhost:6379/0
-    RABBITMQ_URL=amqp://guest:guest@localhost:5672/
-    AWS_ACCESS_KEY_ID=sua_chave_de_acesso
-    AWS_SECRET_ACCESS_KEY=sua_chave_secreta
-    AWS_REGION=sua_regiao
-    JWT_SECRET=seu_segredo_jwt
     ```
 
 3. Instale as dependências:
@@ -90,11 +83,6 @@ Para iniciar um microserviço específico, siga o exemplo abaixo:
     - Para serviços Java com Spring Boot:
       ```bash
       ./mvnw spring-boot:run
-      ```
-
-    - Para serviços Python:
-      ```bash
-      uvicorn main:app --host 0.0.0.0 --port 8000
       ```
 
 3. Acesse o serviço através da URL:
@@ -150,12 +138,6 @@ docker-compose exec <nome_do_servico> /bin/sh
 3. Configure as variáveis de ambiente necessárias em um arquivo `.env.prod`:
     ```env
     DATABASE_URL=postgresql://usuario:senha@db_producao:5432/meubanco
-    REDIS_URL=redis://redis_producao:6379/0
-    RABBITMQ_URL=amqp://guest:guest@rabbitmq_producao:5672/
-    AWS_ACCESS_KEY_ID=sua_chave_de_acesso_producao
-    AWS_SECRET_ACCESS_KEY=sua_chave_secreta_producao
-    AWS_REGION=sua_regiao_producao
-    JWT_SECRET=seu_segredo_jwt_producao
     ```
 
 4. Suba os contêineres Docker para o ambiente de produção:
@@ -190,11 +172,6 @@ Execute os testes automatizados utilizando os seguintes comandos:
 - Para serviços Java com Spring Boot:
   ```bash
   ./mvnw test
-  ```
-
-- Para serviços Python:
-  ```bash
-  pytest
   ```
 
 ## 🤝 Contribuições
