@@ -1,4 +1,4 @@
-# Nova Painel
+# Ecommerce simplay
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/usuario/repositorio/actions)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
@@ -20,39 +20,17 @@
 - [📞 Contato](##contato)
 
 ## 📄 Descrição
+olá devs tudo bem ? com vocês hoje estou divulgando aqui um projeto que tinha sido criado por mim e pelo colega a algum tempo e não estavamos utilizando nenhum padrão de projeto, contudo decidimos refatorar e utilizar padrões de projeto e também atualizar o projeto em geral para conhecimento que foi adquirido ao longo desse periodo de estudos.
 
-Este repositório e painel da nova software responsavel pela administração dos produtos,pedidos, emissão de etiqueta e etc feito pelos usuarios,A nova software e uma plataforma inovadora, teve seu início em 2023 com intuito de ser um sistema onde fornece serviços personalizados atendendo as demandas de micro empresas que estão iniciando no mercado de ecommerce ou seja vendas online. 
-O sistemas está na sua faze de desenvolvimento é previsto que seu término ocorrerá em 2025, entretanto até o desenvolvimento ser totalmente concluído alguns serviços seriam disponibilizados afim de teste feitos pelos próprios usuário compreendendo as reais necessidades do mesmo.. O sistema é construído para ser escalável, modular e de fácil manutenção, utilizando uma arquitetura baseada em microserviços.
-
-## 🏛️ Arquitetura
-
-A arquitetura do sistema é baseada em microserviços, cada um responsável por uma função específica e comunicando-se entre si através de APIs REST e mensageria. A seguir, uma visão geral dos principais componentes:
-
-- **Gateway de API:** Centraliza e gerencia todas as requisições dos clientes, distribuindo-as para os microserviços apropriados.
-- **Serviço de Autenticação:** Gerencia a autenticação e autorização dos usuários, utilizando OAuth 2.0.
-- **Serviço de Usuários:** Controla o cadastro, atualização e gerenciamento de perfis de usuários.
-- **Serviço de Pagamentos:** Processa pagamentos e transações financeiras de maneira segura e eficiente.
-- **Serviço de Relatórios:** Gera relatórios detalhados com base nos dados do sistema, utilizando Python.
-- **Serviço de Notificações:** Envia notificações por e-mail e SMS aos usuários, utilizando AWS SNS e SES.
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **Linguagens de Programação:**
   - Java (Spring Boot para construção de microserviços robustos e escaláveis)
-  - Python (para geração de relatórios e processamento de dados)
 - **Banco de Dados:**
   - MySQL (para dados relacionais)
-- **Mensageria:**
-  - RabbitMQ (mensageria e filas de tarefas)
-  - AWS SNS (serviço de notificação)
 - **Infraestrutura:**
   - Docker (contenedorização de aplicações)
-  - Kubernetes (orquestração de contêineres)
-- **Cache e Armazenamento:**
-  - Redis (cache de alto desempenho)
-- **Monitoramento e Observabilidade:**
-  - Prometheus (coleta e monitoramento de métricas)
-  - Grafana (visualização de métricas e dashboards)
 
 ## ⚙️ Configuração do Ambiente
 
@@ -62,7 +40,6 @@ A arquitetura do sistema é baseada em microserviços, cada um responsável por 
 - [Docker Compose](https://docs.docker.com/compose/install/)
 - [Git](https://git-scm.com/)
 - JDK 11+ (para serviços Spring Boot)
-- Python 3.8+ (para serviços Python)
 
 ### Passo a Passo
 
@@ -87,11 +64,6 @@ A arquitetura do sistema é baseada em microserviços, cada um responsável por 
     - Para serviços Java com Spring Boot:
       ```bash
       ./mvnw install
-      ```
-
-    - Para serviços Python:
-      ```bash
-      pip install -r requirements.txt
       ```
 
 4. Inicie os contêineres Docker:
@@ -238,4 +210,4 @@ Contribuições são bem-vindas! Por favor, siga os passos abaixo para contribui
 Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 ## 📞 Contato
-Para dúvidas e suporte, entre em contato com novasoftwareorganization@gmail.com
+Para dúvidas e suporte, entre em contato com ikauedeveloper@gmail.com
