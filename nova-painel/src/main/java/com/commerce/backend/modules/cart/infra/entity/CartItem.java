@@ -1,18 +1,16 @@
-package com.commerce.backend.cart.infra.entity;
+package com.commerce.backend.modules.cart.infra.entity;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 
-import com.commerce.backend.product.infra.entity.ProductVariant;
+import com.commerce.backend.modules.product.infra.entity.ProductVariant;
 
+@Data
 @Entity
 @Table(name = "cart_item")
-@Getter
-@Setter
 @NoArgsConstructor
 @ToString(exclude = "cart")
 public class CartItem {

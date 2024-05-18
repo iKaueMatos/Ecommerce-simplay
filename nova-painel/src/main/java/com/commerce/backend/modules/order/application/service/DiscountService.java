@@ -1,4 +1,4 @@
-package com.commerce.backend.order.application.service;
+package com.commerce.backend.modules.order.application.service;
 
 public interface DiscountService {
     void applyDiscount(String code);

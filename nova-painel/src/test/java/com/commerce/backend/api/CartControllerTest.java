@@ -1,14 +1,14 @@
 package com.commerce.backend.api;
 
-import com.commerce.backend.cart.application.useCases.dto.AddToCartRequest;
-import com.commerce.backend.cart.application.useCases.dto.CartResponse;
-import com.commerce.backend.cart.application.useCases.dto.ConfirmCartRequest;
-import com.commerce.backend.cart.application.useCases.dto.DecrementCartItemRequest;
-import com.commerce.backend.cart.application.useCases.dto.IncrementCartItemRequest;
-import com.commerce.backend.cart.application.useCases.dto.RemoveFromCartRequest;
-import com.commerce.backend.order.application.service.CartService;
-import com.commerce.backend.order.application.useCases.controller.CartController;
-import com.commerce.backend.order.domain.model.DiscountDTO;
+import com.commerce.backend.modules.cart.application.useCases.dto.AddToCartRequest;
+import com.commerce.backend.modules.cart.application.useCases.dto.CartResponse;
+import com.commerce.backend.modules.cart.application.useCases.dto.ConfirmCartRequest;
+import com.commerce.backend.modules.cart.application.useCases.dto.DecrementCartItemRequest;
+import com.commerce.backend.modules.cart.application.useCases.dto.IncrementCartItemRequest;
+import com.commerce.backend.modules.cart.application.useCases.dto.RemoveFromCartRequest;
+import com.commerce.backend.modules.order.application.service.CartService;
+import com.commerce.backend.modules.order.application.useCases.controller.CartController;
+import com.commerce.backend.modules.order.domain.model.DiscountDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
@@ -41,7 +41,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(CartController.class)
 @AutoConfigureWebClient
 @WithMockUser
-@ComponentScan(basePackages = {"com.commerce.backend.constants"})
+@ComponentScan(basePackages = {"com.commerce.backend.modulesconstants"})
 class CartControllerTest {
 
     @Autowired

@@ -73,5 +73,4 @@ public class RestExceptionHandler {
     private ResponseEntity<ApiError> buildResponseEntity(ApiError apiError) {
         return new ResponseEntity<>(apiError, apiError.getStatus());
     }
-
 }

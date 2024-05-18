@@ -1,10 +1,9 @@
 package com.commerce.backend.api;
 
-
-import com.commerce.backend.order.application.service.OrderService;
-import com.commerce.backend.order.application.useCases.controller.OrderController;
-import com.commerce.backend.order.application.useCases.dto.OrderResponse;
-import com.commerce.backend.order.application.useCases.dto.PostOrderRequest;
+import com.commerce.backend.modules.order.application.service.OrderService;
+import com.commerce.backend.modules.order.application.useCases.controller.OrderController;
+import com.commerce.backend.modules.order.application.useCases.dto.OrderResponse;
+import com.commerce.backend.modules.order.application.useCases.dto.PostOrderRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
@@ -40,7 +39,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(OrderController.class)
 @AutoConfigureWebClient
 @WithMockUser
-@ComponentScan(basePackages = {"com.commerce.backend.constants"})
+@ComponentScan(basePackages = {"com.commerce.backend.modulesconstants"})
 class OrderControllerTest {
 
     @Autowired

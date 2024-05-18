@@ -1,23 +1,23 @@
-package com.commerce.backend.user.domain.service;
+package com.commerce.backend.modules.user.domain.service;
 
-import com.commerce.backend.core.error.exception.InvalidArgumentException;
-import com.commerce.backend.core.error.exception.ResourceNotFoundException;
-
-import com.commerce.backend.user.application.converter.UserResponseConverter;
-import com.commerce.backend.user.application.useCases.dto.PasswordResetRequest;
-import com.commerce.backend.user.application.useCases.dto.RegisterUserRequest;
-import com.commerce.backend.user.application.useCases.dto.UpdateUserAddressRequest;
-import com.commerce.backend.user.application.useCases.dto.UpdateUserRequest;
-import com.commerce.backend.user.application.useCases.dto.UserResponse;
-import com.commerce.backend.user.application.useCases.service.IUserService;
-import com.commerce.backend.user.infra.entity.User;
-import com.commerce.backend.user.infra.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.commerce.backend.modules.user.application.converter.UserResponseConverter;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordResetRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.RegisterUserRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UpdateUserAddressRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UpdateUserRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UserResponse;
+import com.commerce.backend.modules.user.application.useCases.service.IUserService;
+import com.commerce.backend.modules.user.infra.repository.UserRepository;
+import com.commerce.backend.core.error.exception.ResourceNotFoundException;
+import com.commerce.backend.core.error.exception.InvalidArgumentException;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 import java.util.Objects;
 import java.util.Optional;
@@ -148,6 +148,4 @@ public class UserServiceImpl implements IUserService {
         User user = getUser();
         return user.getEmailVerified() == 1;
     }
-
-
 }

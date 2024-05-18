@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @RunWith(JUnitPlatform.class)
-@ComponentScan(basePackages = {"com.commerce.backend.constants"})
+@ComponentScan(basePackages = {"com.commerce.backend.modulesconstants"})
 class CachingConfigurationTest {
 
     @Autowired

@@ -1,20 +1,18 @@
-package com.commerce.backend.order.infra.entity;
+package com.commerce.backend.modules.order.infra.entity;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 
-import com.commerce.backend.cart.infra.entity.Cart;
+import com.commerce.backend.modules.cart.infra.entity.Cart;
 
 import java.util.List;
 
+@Data
 @Entity
 @Table(name = "discount")
-@Getter
-@Setter
 @NoArgsConstructor
 @ToString(exclude = {"orderList", "cartList"})
 public class Discount {
@@ -38,5 +36,4 @@ public class Discount {
 
     @Column(name = "status")
     private Integer status;
-
 }

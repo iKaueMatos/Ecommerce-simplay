@@ -1,14 +1,14 @@
-package com.commerce.backend.auth.application.useCases.controller;
+package com.commerce.backend.modules.auth.application.useCases.controller;
 
-import com.commerce.backend.auth.application.services.ITokenService;
+import com.commerce.backend.modules.auth.application.services.ITokenService;
 import com.commerce.backend.core.controller.PublicApiController;
-import com.commerce.backend.user.application.useCases.dto.PasswordForgotConfirmRequest;
-import com.commerce.backend.user.application.useCases.dto.PasswordForgotRequest;
-import com.commerce.backend.user.application.useCases.dto.PasswordForgotValidateRequest;
-import com.commerce.backend.user.application.useCases.dto.RegisterUserRequest;
-import com.commerce.backend.user.application.useCases.dto.ValidateEmailRequest;
-import com.commerce.backend.user.application.useCases.service.IUserService;
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordForgotConfirmRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordForgotRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordForgotValidateRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.RegisterUserRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.ValidateEmailRequest;
+import com.commerce.backend.modules.user.application.useCases.service.IUserService;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

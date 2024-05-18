@@ -1,4 +1,4 @@
-package com.commerce.backend.user.application.useCases.dto;
+package com.commerce.backend.modules.user.application.useCases.dto;
 
 import lombok.Data;
 
@@ -22,5 +22,4 @@ public class PasswordResetRequest {
     @NotBlank
     @Size(min = 6, max = 52)
     private String newPasswordConfirm;
-
 }

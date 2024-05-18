@@ -1,6 +1,6 @@
-package com.commerce.backend.cart.domain.model;
+package com.commerce.backend.modules.cart.domain.model;
 
-import com.commerce.backend.product.domain.model.ColorDTO;
+import com.commerce.backend.modules.product.domain.model.ColorDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

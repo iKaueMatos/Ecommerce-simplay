@@ -1,13 +1,13 @@
-package com.commerce.backend.auth.application.listener;
-
-import com.commerce.backend.auth.domain.event.OnPasswordForgotRequestEvent;
-import com.commerce.backend.shared.constants.MailConstants;
+package com.commerce.backend.modules.auth.application.listener;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
+
+import com.commerce.backend.modules.auth.domain.event.OnPasswordForgotRequestEvent;
+import com.commerce.backend.shared.constants.MailConstants;
 
 @Component
 public class PasswordForgotListener implements ApplicationListener<OnPasswordForgotRequestEvent> {

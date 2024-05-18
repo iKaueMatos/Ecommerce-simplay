@@ -1,7 +1,7 @@
-package com.commerce.backend.auth.application.services;
+package com.commerce.backend.modules.auth.application.services;
 
-import com.commerce.backend.user.application.useCases.dto.PasswordForgotValidateRequest;
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordForgotValidateRequest;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 public interface ITokenService {
     void createEmailConfirmToken(User user);

@@ -1,11 +1,11 @@
-package com.commerce.backend.order.application.converter;
+package com.commerce.backend.modules.order.application.converter;
 
-import com.commerce.backend.order.application.useCases.dto.OrderResponse;
-import com.commerce.backend.order.domain.model.DiscountDTO;
-import com.commerce.backend.order.domain.model.OrderDetailDTO;
-import com.commerce.backend.order.infra.entity.Order;
-import com.commerce.backend.product.domain.model.CategoryDTO;
-import com.commerce.backend.product.domain.model.ColorDTO;
+import com.commerce.backend.modules.order.application.useCases.dto.OrderResponse;
+import com.commerce.backend.modules.order.domain.model.DiscountDTO;
+import com.commerce.backend.modules.order.domain.model.OrderDetailDTO;
+import com.commerce.backend.modules.order.infra.entity.Order;
+import com.commerce.backend.modules.product.domain.model.CategoryDTO;
+import com.commerce.backend.modules.product.domain.model.ColorDTO;
 
 import org.springframework.stereotype.Component;
 

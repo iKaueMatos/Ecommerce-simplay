@@ -1,17 +1,17 @@
 package com.commerce.backend.service;
 
-import com.commerce.backend.auth.domain.event.OnPasswordForgotRequestEvent;
-import com.commerce.backend.auth.domain.event.OnRegistrationCompleteEvent;
-import com.commerce.backend.auth.domain.service.TokenServiceImpl;
-import com.commerce.backend.auth.infra.entity.PasswordForgotToken;
-import com.commerce.backend.auth.infra.entity.VerificationToken;
-import com.commerce.backend.auth.infra.repository.PasswordForgotTokenRepository;
-import com.commerce.backend.auth.infra.repository.VerificationTokenRepository;
+import com.commerce.backend.modules.auth.domain.event.OnPasswordForgotRequestEvent;
+import com.commerce.backend.modules.auth.domain.event.OnRegistrationCompleteEvent;
+import com.commerce.backend.modules.auth.domain.service.TokenServiceImpl;
+import com.commerce.backend.modules.auth.infra.entity.PasswordForgotToken;
+import com.commerce.backend.modules.auth.infra.entity.VerificationToken;
+import com.commerce.backend.modules.auth.infra.repository.PasswordForgotTokenRepository;
+import com.commerce.backend.modules.auth.infra.repository.VerificationTokenRepository;
 import com.commerce.backend.core.error.exception.InvalidArgumentException;
 import com.commerce.backend.core.error.exception.ResourceNotFoundException;
-import com.commerce.backend.user.application.useCases.dto.PasswordForgotValidateRequest;
-import com.commerce.backend.user.application.useCases.service.IUserService;
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordForgotValidateRequest;
+import com.commerce.backend.modules.user.application.useCases.service.IUserService;
+import com.commerce.backend.modules.user.infra.entity.User;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

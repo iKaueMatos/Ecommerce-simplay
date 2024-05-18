@@ -1,9 +1,9 @@
-package com.commerce.backend.order.infra.repository;
+package com.commerce.backend.modules.order.infra.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.commerce.backend.order.infra.entity.Discount;
+import com.commerce.backend.modules.order.infra.entity.Discount;
 
 import java.util.Optional;
 

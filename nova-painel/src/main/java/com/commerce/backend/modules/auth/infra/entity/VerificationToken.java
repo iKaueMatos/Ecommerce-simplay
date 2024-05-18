@@ -1,22 +1,20 @@
-package com.commerce.backend.auth.infra.entity;
+package com.commerce.backend.modules.auth.infra.entity;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 import java.util.Date;
 
+@Data
 @Entity
-@Table(name = "verification_token")
-@Getter
-@Setter
-@NoArgsConstructor
 @ToString
+@NoArgsConstructor
+@Table(name = "verification_token")
 public class VerificationToken {
 
     @Id

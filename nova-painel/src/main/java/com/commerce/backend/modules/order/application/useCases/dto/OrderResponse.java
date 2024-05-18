@@ -1,11 +1,11 @@
-package com.commerce.backend.order.application.useCases.dto;
+package com.commerce.backend.modules.order.application.useCases.dto;
 
 import lombok.Data;
 
 import java.util.List;
 
-import com.commerce.backend.order.domain.model.DiscountDTO;
-import com.commerce.backend.order.domain.model.OrderDetailDTO;
+import com.commerce.backend.modules.order.domain.model.DiscountDTO;
+import com.commerce.backend.modules.order.domain.model.OrderDetailDTO;
 
 @Data
 public class OrderResponse {

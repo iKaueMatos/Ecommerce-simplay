@@ -1,11 +1,11 @@
-package com.commerce.backend.user.application.useCases.service;
+package com.commerce.backend.modules.user.application.useCases.service;
 
-import com.commerce.backend.user.application.useCases.dto.PasswordResetRequest;
-import com.commerce.backend.user.application.useCases.dto.RegisterUserRequest;
-import com.commerce.backend.user.application.useCases.dto.UpdateUserAddressRequest;
-import com.commerce.backend.user.application.useCases.dto.UpdateUserRequest;
-import com.commerce.backend.user.application.useCases.dto.UserResponse;
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordResetRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.RegisterUserRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UpdateUserAddressRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UpdateUserRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UserResponse;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 public interface IUserService {
     User register(RegisterUserRequest registerUserRequest);

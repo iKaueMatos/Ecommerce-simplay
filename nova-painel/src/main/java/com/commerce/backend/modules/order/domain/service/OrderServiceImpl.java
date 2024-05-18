@@ -1,18 +1,18 @@
-package com.commerce.backend.order.domain.service;
+package com.commerce.backend.modules.order.domain.service;
 
-import com.commerce.backend.cart.infra.entity.Cart;
+import com.commerce.backend.modules.cart.infra.entity.Cart;
 import com.commerce.backend.core.error.exception.InvalidArgumentException;
 import com.commerce.backend.core.error.exception.ResourceFetchException;
-import com.commerce.backend.order.application.converter.OrderResponseConverter;
-import com.commerce.backend.order.application.service.CartService;
-import com.commerce.backend.order.application.service.OrderService;
-import com.commerce.backend.order.application.useCases.dto.OrderResponse;
-import com.commerce.backend.order.application.useCases.dto.PostOrderRequest;
-import com.commerce.backend.order.infra.entity.Order;
-import com.commerce.backend.order.infra.entity.OrderDetail;
-import com.commerce.backend.order.infra.repository.OrderRepository;
-import com.commerce.backend.user.application.useCases.service.IUserService;
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.order.application.converter.OrderResponseConverter;
+import com.commerce.backend.modules.order.application.service.CartService;
+import com.commerce.backend.modules.order.application.service.OrderService;
+import com.commerce.backend.modules.order.application.useCases.dto.OrderResponse;
+import com.commerce.backend.modules.order.application.useCases.dto.PostOrderRequest;
+import com.commerce.backend.modules.order.infra.entity.Order;
+import com.commerce.backend.modules.order.infra.entity.OrderDetail;
+import com.commerce.backend.modules.order.infra.repository.OrderRepository;
+import com.commerce.backend.modules.user.application.useCases.service.IUserService;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

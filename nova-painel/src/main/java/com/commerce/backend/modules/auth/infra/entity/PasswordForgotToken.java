@@ -1,4 +1,4 @@
-package com.commerce.backend.auth.infra.entity;
+package com.commerce.backend.modules.auth.infra.entity;
 
 import lombok.Data;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 import java.util.Date;
 

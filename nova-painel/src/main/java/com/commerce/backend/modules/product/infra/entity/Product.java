@@ -1,5 +1,6 @@
-package com.commerce.backend.product.infra.entity;
+package com.commerce.backend.modules.product.infra.entity;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,10 +11,9 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
+@Data
 @Entity
 @Table(name = "product")
-@Getter
-@Setter
 @NoArgsConstructor
 @ToString(exclude = {"productCategory", "productVariantList"})
 public class Product {
@@ -52,5 +52,4 @@ public class Product {
 
     @Column(name = "unlimited")
     private Integer unlimited;
-
 }

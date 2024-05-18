@@ -1,14 +1,11 @@
-package com.commerce.backend.auth.domain.event;
+package com.commerce.backend.modules.auth.domain.event;
 
-
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.context.ApplicationEvent;
 
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.user.infra.entity.User;
 
-@Getter
-@Setter
+@Data
 public class OnPasswordForgotRequestEvent extends ApplicationEvent {
     private User user;
     private String token;

@@ -1,19 +1,19 @@
-package com.commerce.backend.order.domain.service;
+package com.commerce.backend.modules.order.domain.service;
 
-import com.commerce.backend.cart.application.converter.CartResponseConverter;
-import com.commerce.backend.cart.application.useCases.dto.CartResponse;
-import com.commerce.backend.cart.application.useCases.dto.ConfirmCartRequest;
-import com.commerce.backend.cart.domain.model.CartItemDTO;
-import com.commerce.backend.cart.infra.entity.Cart;
-import com.commerce.backend.cart.infra.entity.CartItem;
-import com.commerce.backend.cart.infra.entity.CartRepository;
+import com.commerce.backend.modules.cart.application.converter.CartResponseConverter;
+import com.commerce.backend.modules.cart.application.useCases.dto.CartResponse;
+import com.commerce.backend.modules.cart.application.useCases.dto.ConfirmCartRequest;
+import com.commerce.backend.modules.cart.domain.model.CartItemDTO;
+import com.commerce.backend.modules.cart.infra.entity.Cart;
+import com.commerce.backend.modules.cart.infra.entity.CartItem;
+import com.commerce.backend.modules.cart.infra.entity.CartRepository;
 import com.commerce.backend.core.error.exception.InvalidArgumentException;
 import com.commerce.backend.core.error.exception.ResourceNotFoundException;
-import com.commerce.backend.order.application.service.CartService;
-import com.commerce.backend.product.application.service.ProductService;
-import com.commerce.backend.product.infra.entity.ProductVariant;
-import com.commerce.backend.user.application.useCases.service.IUserService;
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.order.application.service.CartService;
+import com.commerce.backend.modules.product.application.service.ProductService;
+import com.commerce.backend.modules.product.infra.entity.ProductVariant;
+import com.commerce.backend.modules.user.application.useCases.service.IUserService;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

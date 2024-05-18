@@ -1,6 +1,5 @@
 package com.commerce.backend.api;
 
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.platform.runner.JUnitPlatform;
@@ -22,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(JUnitPlatform.class)
 @WebMvcTest(IndexController.class)
 @AutoConfigureWebClient
-@ComponentScan(basePackages = {"com.commerce.backend.constants"})
+@ComponentScan(basePackages = {"com.commerce.backend.modulesconstants"})
 class IndexControllerTest {
 
     @Autowired

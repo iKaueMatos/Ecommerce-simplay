@@ -3,9 +3,10 @@ package com.commerce.backend.shared.validator;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.commerce.backend.user.application.useCases.dto.PasswordForgotValidateRequest;
-import com.commerce.backend.user.application.useCases.dto.PasswordResetRequest;
-import com.commerce.backend.user.application.useCases.dto.RegisterUserRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordForgotValidateRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordResetRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.RegisterUserRequest;
+
 
 public class PasswordMatchesValidator implements ConstraintValidator<PasswordMatches, Object> {
     @Override

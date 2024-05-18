@@ -1,8 +1,8 @@
-package com.commerce.backend.product.application.useCases.controller;
+package com.commerce.backend.modules.product.application.useCases.controller;
 
 import com.commerce.backend.core.controller.PublicApiController;
-import com.commerce.backend.product.application.service.ProductCategoryService;
-import com.commerce.backend.product.application.useCases.dto.ProductCategoryResponse;
+import com.commerce.backend.modules.product.application.service.ProductCategoryService;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductCategoryResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

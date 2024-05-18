@@ -1,19 +1,16 @@
-package com.commerce.backend.order.infra.entity;
+package com.commerce.backend.modules.order.infra.entity;
 
-
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 
-import com.commerce.backend.product.infra.entity.ProductVariant;
+import com.commerce.backend.modules.product.infra.entity.ProductVariant;
 
+@Data
 @Entity
 @Table(name = "order_detail")
-@Getter
-@Setter
 @NoArgsConstructor
 @ToString(exclude = "order")
 public class OrderDetail {

@@ -1,18 +1,18 @@
-package com.commerce.backend.order.application.useCases.controller;
+package com.commerce.backend.modules.order.application.useCases.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.commerce.backend.cart.application.useCases.dto.AddToCartRequest;
-import com.commerce.backend.cart.application.useCases.dto.CartResponse;
-import com.commerce.backend.cart.application.useCases.dto.ConfirmCartRequest;
-import com.commerce.backend.cart.application.useCases.dto.DecrementCartItemRequest;
-import com.commerce.backend.cart.application.useCases.dto.IncrementCartItemRequest;
-import com.commerce.backend.cart.application.useCases.dto.RemoveFromCartRequest;
+import com.commerce.backend.modules.cart.application.useCases.dto.AddToCartRequest;
+import com.commerce.backend.modules.cart.application.useCases.dto.CartResponse;
+import com.commerce.backend.modules.cart.application.useCases.dto.ConfirmCartRequest;
+import com.commerce.backend.modules.cart.application.useCases.dto.DecrementCartItemRequest;
+import com.commerce.backend.modules.cart.application.useCases.dto.IncrementCartItemRequest;
+import com.commerce.backend.modules.cart.application.useCases.dto.RemoveFromCartRequest;
 import com.commerce.backend.core.controller.ApiController;
-import com.commerce.backend.order.application.service.CartService;
+import com.commerce.backend.modules.order.application.service.CartService;
 
 import javax.validation.Valid;
 

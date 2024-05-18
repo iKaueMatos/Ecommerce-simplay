@@ -1,10 +1,10 @@
-package com.commerce.backend.order.application.useCases.controller;
+package com.commerce.backend.modules.order.application.useCases.controller;
 
 import com.commerce.backend.core.controller.ApiController;
 import com.commerce.backend.core.error.exception.InvalidArgumentException;
-import com.commerce.backend.order.application.service.OrderService;
-import com.commerce.backend.order.application.useCases.dto.OrderResponse;
-import com.commerce.backend.order.application.useCases.dto.PostOrderRequest;
+import com.commerce.backend.modules.order.application.service.OrderService;
+import com.commerce.backend.modules.order.application.useCases.dto.OrderResponse;
+import com.commerce.backend.modules.order.application.useCases.dto.PostOrderRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

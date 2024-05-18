@@ -1,20 +1,18 @@
-package com.commerce.backend.user.infra.entity;
+package com.commerce.backend.modules.user.infra.entity;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.Type;
 
-import com.commerce.backend.cart.infra.entity.Cart;
+import com.commerce.backend.modules.cart.infra.entity.Cart;
 
 import javax.persistence.*;
 import java.util.Date;
 
+@Data
 @Entity
 @Table(name = "user")
-@Getter
-@Setter
 @NoArgsConstructor
 @ToString(exclude = "cart")
 public class User {

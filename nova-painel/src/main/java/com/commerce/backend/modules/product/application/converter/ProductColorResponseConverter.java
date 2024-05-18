@@ -1,8 +1,8 @@
-package com.commerce.backend.product.application.converter;
+package com.commerce.backend.modules.product.application.converter;
 
-import com.commerce.backend.product.application.useCases.dto.ProductColorResponse;
-import com.commerce.backend.product.domain.model.ColorDTO;
-import com.commerce.backend.product.infra.entity.Color;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductColorResponse;
+import com.commerce.backend.modules.product.domain.model.ColorDTO;
+import com.commerce.backend.modules.product.infra.entity.Color;
 
 import org.springframework.stereotype.Component;
 

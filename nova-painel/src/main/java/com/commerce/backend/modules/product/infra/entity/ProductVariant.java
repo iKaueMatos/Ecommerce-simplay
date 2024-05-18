@@ -1,19 +1,16 @@
-package com.commerce.backend.product.infra.entity;
+package com.commerce.backend.modules.product.infra.entity;
 
-
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 
+@Data
 @Entity
-@Table(name = "product_variant")
-@Getter
-@Setter
-@NoArgsConstructor
 @ToString
+@Table(name = "product_variant")
+@NoArgsConstructor
 public class ProductVariant {
 
     @Id
@@ -61,5 +58,4 @@ public class ProductVariant {
 
     @Column(name = "live")
     private Integer live;
-
 }

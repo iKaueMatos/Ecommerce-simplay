@@ -11,8 +11,8 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: nova
       MYSQL_PASSWORD: nova
-    volumes:
-      - './sql/script.sql/:/docker-entrypoint-initdb.d/script.sql'
+    networks:
+      - gv-network
 
   authorization_server:
     restart: always

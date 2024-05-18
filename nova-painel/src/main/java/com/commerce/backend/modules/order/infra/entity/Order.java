@@ -1,4 +1,4 @@
-package com.commerce.backend.order.infra.entity;
+package com.commerce.backend.modules.order.infra.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -6,7 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.Type;
 
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 import javax.persistence.*;
 import java.util.Date;

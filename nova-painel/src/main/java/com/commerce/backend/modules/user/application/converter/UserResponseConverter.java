@@ -1,11 +1,11 @@
-package com.commerce.backend.user.application.converter;
+package com.commerce.backend.modules.user.application.converter;
 
-import com.commerce.backend.user.application.useCases.dto.UserResponse;
-import com.commerce.backend.user.infra.entity.User;
+import java.util.function.Function;
 
 import org.springframework.stereotype.Component;
 
-import java.util.function.Function;
+import com.commerce.backend.modules.user.application.useCases.dto.UserResponse;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 @Component
 public class UserResponseConverter implements Function<User, UserResponse> {

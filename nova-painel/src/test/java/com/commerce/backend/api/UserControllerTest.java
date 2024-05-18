@@ -1,11 +1,11 @@
 package com.commerce.backend.api;
 
-import com.commerce.backend.user.application.useCases.controller.UserController;
-import com.commerce.backend.user.application.useCases.dto.PasswordResetRequest;
-import com.commerce.backend.user.application.useCases.dto.UpdateUserAddressRequest;
-import com.commerce.backend.user.application.useCases.dto.UpdateUserRequest;
-import com.commerce.backend.user.application.useCases.dto.UserResponse;
-import com.commerce.backend.user.application.useCases.service.IUserService;
+import com.commerce.backend.modules.user.application.useCases.controller.UserController;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordResetRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UpdateUserAddressRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UpdateUserRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UserResponse;
+import com.commerce.backend.modules.user.application.useCases.service.IUserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
@@ -37,7 +37,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(UserController.class)
 @AutoConfigureWebClient
 @WithMockUser
-@ComponentScan(basePackages = {"com.commerce.backend.constants"})
+@ComponentScan(basePackages = {"com.commerce.backend.modulesconstants"})
 class UserControllerTest {
 
     @Autowired

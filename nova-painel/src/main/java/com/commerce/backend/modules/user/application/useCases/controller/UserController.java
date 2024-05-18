@@ -1,11 +1,11 @@
-package com.commerce.backend.user.application.useCases.controller;
+package com.commerce.backend.modules.user.application.useCases.controller;
 
 import com.commerce.backend.core.controller.ApiController;
-import com.commerce.backend.user.application.useCases.dto.PasswordResetRequest;
-import com.commerce.backend.user.application.useCases.dto.UpdateUserAddressRequest;
-import com.commerce.backend.user.application.useCases.dto.UpdateUserRequest;
-import com.commerce.backend.user.application.useCases.dto.UserResponse;
-import com.commerce.backend.user.application.useCases.service.IUserService;
+import com.commerce.backend.modules.user.application.useCases.dto.PasswordResetRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UpdateUserAddressRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UpdateUserRequest;
+import com.commerce.backend.modules.user.application.useCases.dto.UserResponse;
+import com.commerce.backend.modules.user.application.useCases.service.IUserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

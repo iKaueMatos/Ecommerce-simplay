@@ -1,8 +1,8 @@
 package com.commerce.backend.api;
 
-import com.commerce.backend.product.application.service.ProductColorService;
-import com.commerce.backend.product.application.useCases.controller.ColorController;
-import com.commerce.backend.product.application.useCases.dto.ProductColorResponse;
+import com.commerce.backend.modules.product.application.service.ProductColorService;
+import com.commerce.backend.modules.product.application.useCases.controller.ColorController;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductColorResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
@@ -36,7 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(JUnitPlatform.class)
 @WebMvcTest(ColorController.class)
 @AutoConfigureWebClient
-@ComponentScan(basePackages = {"com.commerce.backend.constants"})
+@ComponentScan(basePackages = {"com.commerce.backend.modulesconstants"})
 class ColorControllerTest {
 
     @Autowired

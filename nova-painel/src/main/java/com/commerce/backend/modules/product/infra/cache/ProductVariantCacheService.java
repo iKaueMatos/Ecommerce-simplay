@@ -1,9 +1,9 @@
-package com.commerce.backend.product.infra.cache;
+package com.commerce.backend.modules.product.infra.cache;
 
 
 import java.util.List;
 
-import com.commerce.backend.product.infra.entity.ProductVariant;
+import com.commerce.backend.modules.product.infra.entity.ProductVariant;
 
 public interface ProductVariantCacheService {
     ProductVariant findById(Long id);

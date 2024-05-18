@@ -1,4 +1,4 @@
-package com.commerce.backend.cart.infra.entity;
+package com.commerce.backend.modules.cart.infra.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,8 +7,8 @@ import lombok.ToString;
 
 import javax.persistence.*;
 
-import com.commerce.backend.order.infra.entity.Discount;
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.order.infra.entity.Discount;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 import java.util.Date;
 import java.util.List;

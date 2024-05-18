@@ -1,4 +1,4 @@
-package com.commerce.backend.user.application.useCases.dto;
+package com.commerce.backend.modules.user.application.useCases.dto;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.commerce.backend.security;
+package com.commerce.backend.modules.security;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.security.core.GrantedAuthority;

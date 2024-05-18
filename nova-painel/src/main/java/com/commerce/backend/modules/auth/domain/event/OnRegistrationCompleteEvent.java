@@ -1,9 +1,9 @@
-package com.commerce.backend.auth.domain.event;
+package com.commerce.backend.modules.auth.domain.event;
 
 import lombok.Data;
 import org.springframework.context.ApplicationEvent;
 
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 @Data
 public class OnRegistrationCompleteEvent extends ApplicationEvent {

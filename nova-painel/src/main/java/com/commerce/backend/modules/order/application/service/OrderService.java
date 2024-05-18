@@ -1,9 +1,9 @@
-package com.commerce.backend.order.application.service;
+package com.commerce.backend.modules.order.application.service;
 
 import java.util.List;
 
-import com.commerce.backend.order.application.useCases.dto.OrderResponse;
-import com.commerce.backend.order.application.useCases.dto.PostOrderRequest;
+import com.commerce.backend.modules.order.application.useCases.dto.OrderResponse;
+import com.commerce.backend.modules.order.application.useCases.dto.PostOrderRequest;
 
 public interface OrderService {
     Integer getAllOrdersCount();

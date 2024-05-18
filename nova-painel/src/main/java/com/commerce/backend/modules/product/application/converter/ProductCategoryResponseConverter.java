@@ -1,8 +1,8 @@
-package com.commerce.backend.product.application.converter;
+package com.commerce.backend.modules.product.application.converter;
 
-import com.commerce.backend.product.application.useCases.dto.ProductCategoryResponse;
-import com.commerce.backend.product.domain.model.CategoryDTO;
-import com.commerce.backend.product.infra.entity.ProductCategory;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductCategoryResponse;
+import com.commerce.backend.modules.product.domain.model.CategoryDTO;
+import com.commerce.backend.modules.product.infra.entity.ProductCategory;
 
 import org.springframework.stereotype.Component;
 

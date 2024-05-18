@@ -1,11 +1,11 @@
-package com.commerce.backend.cart.application.useCases.dto;
+package com.commerce.backend.modules.cart.application.useCases.dto;
 
 import lombok.Data;
 
 import java.util.List;
 
-import com.commerce.backend.cart.domain.model.CartItemDTO;
-import com.commerce.backend.order.domain.model.DiscountDTO;
+import com.commerce.backend.modules.cart.domain.model.CartItemDTO;
+import com.commerce.backend.modules.order.domain.model.DiscountDTO;
 
 @Data
 public class CartResponse {

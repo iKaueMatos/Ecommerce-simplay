@@ -1,11 +1,11 @@
-package com.commerce.backend.product.application.useCases.controller;
+package com.commerce.backend.modules.product.application.useCases.controller;
 
 import com.commerce.backend.core.controller.PublicApiController;
 import com.commerce.backend.core.error.exception.InvalidArgumentException;
-import com.commerce.backend.product.application.service.ProductService;
-import com.commerce.backend.product.application.useCases.dto.ProductDetailsResponse;
-import com.commerce.backend.product.application.useCases.dto.ProductResponse;
-import com.commerce.backend.product.application.useCases.dto.ProductVariantResponse;
+import com.commerce.backend.modules.product.application.service.ProductService;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductDetailsResponse;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductResponse;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductVariantResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,6 @@
-package com.commerce.backend.auth.application.listener;
+package com.commerce.backend.modules.auth.application.listener;
 
-import com.commerce.backend.auth.domain.event.OnRegistrationCompleteEvent;
+import com.commerce.backend.modules.auth.domain.event.OnRegistrationCompleteEvent;
 import com.commerce.backend.shared.constants.MailConstants;
 
 import org.springframework.beans.factory.annotation.Autowired;

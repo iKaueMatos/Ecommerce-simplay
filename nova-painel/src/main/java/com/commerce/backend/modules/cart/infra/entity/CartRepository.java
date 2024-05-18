@@ -1,4 +1,4 @@
-package com.commerce.backend.cart.infra.entity;
+package com.commerce.backend.modules.cart.infra.entity;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

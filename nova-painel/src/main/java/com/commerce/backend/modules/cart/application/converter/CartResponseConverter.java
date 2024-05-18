@@ -1,10 +1,10 @@
-package com.commerce.backend.cart.application.converter;
+package com.commerce.backend.modules.cart.application.converter;
 
-import com.commerce.backend.cart.application.useCases.dto.CartResponse;
-import com.commerce.backend.cart.domain.model.CartItemDTO;
-import com.commerce.backend.cart.infra.entity.Cart;
-import com.commerce.backend.order.domain.model.DiscountDTO;
-import com.commerce.backend.product.domain.model.ColorDTO;
+import com.commerce.backend.modules.cart.application.useCases.dto.CartResponse;
+import com.commerce.backend.modules.cart.domain.model.CartItemDTO;
+import com.commerce.backend.modules.cart.infra.entity.Cart;
+import com.commerce.backend.modules.order.domain.model.DiscountDTO;
+import com.commerce.backend.modules.product.domain.model.ColorDTO;
 
 import org.springframework.stereotype.Component;
 

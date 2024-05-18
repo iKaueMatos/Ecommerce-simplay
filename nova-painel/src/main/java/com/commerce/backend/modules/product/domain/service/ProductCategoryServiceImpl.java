@@ -1,11 +1,11 @@
-package com.commerce.backend.product.domain.service;
+package com.commerce.backend.modules.product.domain.service;
 
 import com.commerce.backend.core.error.exception.ResourceNotFoundException;
-import com.commerce.backend.product.application.converter.ProductCategoryResponseConverter;
-import com.commerce.backend.product.application.service.ProductCategoryService;
-import com.commerce.backend.product.application.useCases.dto.ProductCategoryResponse;
-import com.commerce.backend.product.infra.cache.ProductCategoryCacheService;
-import com.commerce.backend.product.infra.entity.ProductCategory;
+import com.commerce.backend.modules.product.application.converter.ProductCategoryResponseConverter;
+import com.commerce.backend.modules.product.application.service.ProductCategoryService;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductCategoryResponse;
+import com.commerce.backend.modules.product.infra.cache.ProductCategoryCacheService;
+import com.commerce.backend.modules.product.infra.entity.ProductCategory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

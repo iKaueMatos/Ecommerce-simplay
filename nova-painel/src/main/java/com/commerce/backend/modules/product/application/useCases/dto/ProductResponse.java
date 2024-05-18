@@ -1,10 +1,10 @@
-package com.commerce.backend.product.application.useCases.dto;
+package com.commerce.backend.modules.product.application.useCases.dto;
 
 import lombok.Data;
 
 import java.util.List;
 
-import com.commerce.backend.product.domain.model.ProductVariantDTO;
+import com.commerce.backend.modules.product.domain.model.ProductVariantDTO;
 
 @Data
 public class ProductResponse {

@@ -1,22 +1,22 @@
-package com.commerce.backend.product.domain.service;
+package com.commerce.backend.modules.product.domain.service;
 
 import com.commerce.backend.core.error.exception.InvalidArgumentException;
 import com.commerce.backend.core.error.exception.ResourceNotFoundException;
 
-import com.commerce.backend.product.application.converter.ProductDetailsResponseConverter;
-import com.commerce.backend.product.application.converter.ProductResponseConverter;
-import com.commerce.backend.product.application.converter.ProductVariantResponseConverter;
-import com.commerce.backend.product.application.service.ProductService;
-import com.commerce.backend.product.application.useCases.dto.ProductDetailsResponse;
-import com.commerce.backend.product.application.useCases.dto.ProductResponse;
-import com.commerce.backend.product.application.useCases.dto.ProductVariantResponse;
-import com.commerce.backend.product.domain.specs.ProductVariantSpecs;
-import com.commerce.backend.product.infra.cache.ProductCacheService;
-import com.commerce.backend.product.infra.cache.ProductVariantCacheService;
-import com.commerce.backend.product.infra.entity.Product;
-import com.commerce.backend.product.infra.entity.ProductVariant;
-import com.commerce.backend.product.infra.repository.ProductRepository;
-import com.commerce.backend.product.infra.repository.ProductVariantRepository;
+import com.commerce.backend.modules.product.application.converter.ProductDetailsResponseConverter;
+import com.commerce.backend.modules.product.application.converter.ProductResponseConverter;
+import com.commerce.backend.modules.product.application.converter.ProductVariantResponseConverter;
+import com.commerce.backend.modules.product.application.service.ProductService;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductDetailsResponse;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductResponse;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductVariantResponse;
+import com.commerce.backend.modules.product.domain.specs.ProductVariantSpecs;
+import com.commerce.backend.modules.product.infra.cache.ProductCacheService;
+import com.commerce.backend.modules.product.infra.cache.ProductVariantCacheService;
+import com.commerce.backend.modules.product.infra.entity.Product;
+import com.commerce.backend.modules.product.infra.entity.ProductVariant;
+import com.commerce.backend.modules.product.infra.repository.ProductRepository;
+import com.commerce.backend.modules.product.infra.repository.ProductVariantRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

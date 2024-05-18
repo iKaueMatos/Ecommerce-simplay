@@ -1,5 +1,4 @@
-package com.commerce.backend.product.infra.entity;
-
+package com.commerce.backend.modules.product.infra.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

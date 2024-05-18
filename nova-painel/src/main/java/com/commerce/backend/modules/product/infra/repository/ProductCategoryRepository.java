@@ -1,9 +1,9 @@
-package com.commerce.backend.product.infra.repository;
+package com.commerce.backend.modules.product.infra.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.commerce.backend.product.infra.entity.ProductCategory;
+import com.commerce.backend.modules.product.infra.entity.ProductCategory;
 
 import java.util.List;
 

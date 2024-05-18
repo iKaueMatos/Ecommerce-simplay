@@ -1,9 +1,9 @@
 package com.commerce.backend.api;
 
 
-import com.commerce.backend.product.application.service.ProductCategoryService;
-import com.commerce.backend.product.application.useCases.controller.CategoryController;
-import com.commerce.backend.product.application.useCases.dto.ProductCategoryResponse;
+import com.commerce.backend.modules.product.application.service.ProductCategoryService;
+import com.commerce.backend.modules.product.application.useCases.controller.CategoryController;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductCategoryResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
@@ -37,7 +37,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(JUnitPlatform.class)
 @WebMvcTest(CategoryController.class)
 @AutoConfigureWebClient
-@ComponentScan(basePackages = {"com.commerce.backend.constants"})
+@ComponentScan(basePackages = {"com.commerce.backend.modulesconstants"})
 class CategoryControllerTest {
 
     @Autowired

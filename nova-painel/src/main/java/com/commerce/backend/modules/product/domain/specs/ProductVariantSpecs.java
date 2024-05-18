@@ -1,8 +1,8 @@
-package com.commerce.backend.product.domain.specs;
+package com.commerce.backend.modules.product.domain.specs;
 
 import org.springframework.data.jpa.domain.Specification;
 
-import com.commerce.backend.product.infra.entity.ProductVariant;
+import com.commerce.backend.modules.product.infra.entity.ProductVariant;
 
 
 public final class ProductVariantSpecs {

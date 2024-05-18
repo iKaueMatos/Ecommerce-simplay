@@ -1,7 +1,7 @@
-package com.commerce.backend.product.infra.cache;
+package com.commerce.backend.modules.product.infra.cache;
 
-import com.commerce.backend.product.infra.entity.ProductVariant;
-import com.commerce.backend.product.infra.repository.ProductVariantRepository;
+import com.commerce.backend.modules.product.infra.entity.ProductVariant;
+import com.commerce.backend.modules.product.infra.repository.ProductVariantRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;

@@ -1,4 +1,4 @@
-package com.commerce.backend.product.domain.model;
+package com.commerce.backend.modules.product.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,12 +1,12 @@
 package com.commerce.backend.service;
 
 import com.commerce.backend.core.error.exception.ResourceNotFoundException;
-import com.commerce.backend.product.application.converter.ProductCategoryResponseConverter;
-import com.commerce.backend.product.application.useCases.dto.ProductCategoryResponse;
-import com.commerce.backend.product.domain.model.CategoryDTO;
-import com.commerce.backend.product.domain.service.ProductCategoryServiceImpl;
-import com.commerce.backend.product.infra.cache.ProductCategoryCacheService;
-import com.commerce.backend.product.infra.entity.ProductCategory;
+import com.commerce.backend.modules.product.application.converter.ProductCategoryResponseConverter;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductCategoryResponse;
+import com.commerce.backend.modules.product.domain.model.CategoryDTO;
+import com.commerce.backend.modules.product.domain.service.ProductCategoryServiceImpl;
+import com.commerce.backend.modules.product.infra.cache.ProductCategoryCacheService;
+import com.commerce.backend.modules.product.infra.entity.ProductCategory;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

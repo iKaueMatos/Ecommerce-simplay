@@ -1,12 +1,12 @@
 package com.commerce.backend.service;
 
 import com.commerce.backend.core.error.exception.ResourceNotFoundException;
-import com.commerce.backend.product.application.converter.ProductColorResponseConverter;
-import com.commerce.backend.product.application.useCases.dto.ProductColorResponse;
-import com.commerce.backend.product.domain.model.ColorDTO;
-import com.commerce.backend.product.domain.service.ProductColorServiceImpl;
-import com.commerce.backend.product.infra.cache.ProductColorCacheService;
-import com.commerce.backend.product.infra.entity.Color;
+import com.commerce.backend.modules.product.application.converter.ProductColorResponseConverter;
+import com.commerce.backend.modules.product.application.useCases.dto.ProductColorResponse;
+import com.commerce.backend.modules.product.domain.model.ColorDTO;
+import com.commerce.backend.modules.product.domain.service.ProductColorServiceImpl;
+import com.commerce.backend.modules.product.infra.cache.ProductColorCacheService;
+import com.commerce.backend.modules.product.infra.entity.Color;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,7 +1,7 @@
-package com.commerce.backend.order.infra.repository;
+package com.commerce.backend.modules.order.infra.repository;
 
-import com.commerce.backend.order.infra.entity.Order;
-import com.commerce.backend.user.infra.entity.User;
+import com.commerce.backend.modules.order.infra.entity.Order;
+import com.commerce.backend.modules.user.infra.entity.User;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -13,6 +13,5 @@ import java.util.Optional;
 @Repository
 public interface OrderRepository extends PagingAndSortingRepository<Order, Long> {
     List<Order> findAllByUserOrderByDateDesc(User user, Pageable pageable);
-
     Optional<Integer> countAllByUser(User user);
 }
